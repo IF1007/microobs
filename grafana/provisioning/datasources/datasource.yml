@@ -9,3 +9,14 @@ datasources:
     basicAuth: false
     isDefault: true
     editable: true
+
+  - name: elasticsearch-filebeat
+    type: elasticsearch
+    access: proxy
+    database: "filebeat-*"
+    url: http://elasticsearch:9200
+    jsonData:
+      timeField: "@timestamp"
+      esVersion: 70
+      logMessageField: message
+      logLevelField: fields.level
