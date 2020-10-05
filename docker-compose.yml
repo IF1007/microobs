@@ -114,16 +114,6 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
-  gateway:
-    image: api_gateway
-    container_name: api_gateway
-    ports:
-      - "8081:8081"
-    networks:
-      - monitor-net
-    labels:
-      org.label-schema.group: "monitoring"
-
   elasticsearch:
     image: "docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
     container_name: elasticsearch
@@ -153,3 +143,13 @@ services:
       org.label-schema.group: "monitoring"
     depends_on:
       - elasticsearch
+
+  gateway:
+    image: api_gateway
+    container_name: api_gateway
+    ports:
+      - "8081:8081"
+    networks:
+      - monitor-net
+    labels:
+      org.label-schema.group: "monitoring"
