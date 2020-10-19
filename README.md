@@ -15,6 +15,7 @@ cd gateway
 # build the image
 sudo docker build -t api_gateway .
 ```
+After that, the microobs repository should be clonned where the `docker-compose up` can be issued to run the services.
 
 ```sh
 git clone https://github.com/microobs/microobs
