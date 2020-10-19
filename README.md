@@ -10,7 +10,7 @@ Right now, the gateway image must be manually built before using docker-compose.
 ```sh
 # clone the gateway repository
 git clone https://github.com/microobs/gateway
-cd dockprom
+cd gateway
 
 # build the image
 sudo docker build -t api_gateway .
