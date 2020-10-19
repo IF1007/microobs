@@ -147,6 +147,10 @@ services:
   gateway:
     image: api_gateway
     container_name: api_gateway
+    #volumes: #uncomment to load a custom config
+    #  - ./gateway-config/default.json:/config/default.json
+    #environment: #uncomment to activate logs/GraphiQL
+    #  - "DEBUG=true"
     ports:
       - "8081:8081"
     networks:
