@@ -149,8 +149,9 @@ services:
     container_name: api_gateway
     #volumes: #uncomment to load a custom config
     #  - ./gateway-config/default.json:/config/default.json
-    #environment: #uncomment to activate logs/GraphiQL
-    #  - "DEBUG=true"
+    #environment: #uncomment to activate route logs/GraphiQL
+      #- "DEBUG=express:router"
+      #- "GRAPHIQL=true"
     ports:
       - "8081:8081"
     networks:
