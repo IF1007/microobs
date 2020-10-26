@@ -24,6 +24,7 @@ cd microobs
 
 ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 ```
+The API Gateway listens at the Port `8081` by default.
 
 ### API Gateway Configuration
 The API Gateway uses the module [node-config](https://github.com/lorenwest/node-config) to load its settings like the url of the observability services. Those settings are load from a JSON file called default.json located at the [/config](https://github.com/microobs/gateway/blob/master/config/default.json) folder. To facilitate the load of custom settings, the folder [gateway-config](https://github.com/microobs/microobs/blob/master/gateway-config/default.json) has a JSON (same name and with the same settings as the one in the API gateway image) that can be used to do so. After editing, one just need to uncomment the volume section in the [docker-compose.yml](https://github.com/microobs/microobs/blob/master/docker-compose.yml) file under the gateway service section.
