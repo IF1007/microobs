@@ -1,4 +1,5 @@
 # MicroObs
+[![License: MIT](https://img.shields.io/github/license/microobs/gateway)](https://opensource.org/licenses/MIT)
 
 ## Goals
 * Make use of the API Gateway pattern to facilitate the consumption of observability data by interested (or external) parties;
