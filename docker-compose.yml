@@ -158,3 +158,9 @@ services:
       - monitor-net
     labels:
       org.label-schema.group: "monitoring"
+      
+  redis:
+    image: "redis:alpine"
+    hostname: redis
+    ports:
+     - "6379:6379"
